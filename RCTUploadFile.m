@@ -7,7 +7,7 @@
 //
 
 #import "RCTUploadFile.h"
-#import "RCTUtils.h"
+#import <React/RCTUtils.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <UIKit/UIKit.h>
 
