@@ -50,21 +50,6 @@ RCT_EXPORT_METHOD(upload:(NSDictionary *)input callback:(RCTResponseSenderBlock)
         
         [self sendData:fileData withOptions:input callback:callback];
         
-        //    Byte *buffer = (Byte*)malloc(rep.size);
-        //    NSUInteger buffered = [rep getBytes:buffer fromOffset:0.0 length:rep.size error:nil];
-        //
-        //    NSData *fileData = [NSData dataWithBytesNoCopy:buffer length:buffered freeWhenDone:YES];
-        // NSDictionary* requestData = [input objectForKey:@"data"];
-        // NSMutableURLRequest* req = [self getMultiPartRequest:fileData serverUrl:uploadUrl requestData:requestData mimeType:mimeType fileName:fileName];
-        //
-        // NSHTTPURLResponse *response = nil;
-        // NSData *returnData = [NSURLConnection sendSynchronousRequest:req returningResponse:&response error:nil];
-        // NSInteger statusCode = [response statusCode];
-        // NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
-        //
-        // NSDictionary *res=[[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithInteger:statusCode],@"status",returnString,@"data",nil];
-        //
-        // callback(@[res]);
     } failureBlock:^(NSError *error) {
         callback(@[RCTMakeError(@"Error loading library asset", nil, nil)]);
     }];
